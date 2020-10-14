@@ -1,0 +1,9 @@
+extraction:
+  cpp:
+    configure:
+      command:
+        - echo ALLTILLA CONFIGURE
+    index:
+      build_command:
+        - echo ALLTILLA BUILD
+        - gcc main.c -o main
