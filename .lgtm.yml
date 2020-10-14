@@ -1,5 +1,13 @@
 extraction:
   cpp:
+    after_prepare: |
+      cd /tmp && wget https://ftp.gnu.org/gnu/bison/bison-3.6.4.tar.gz && tar -xzf bison-3.6.4.tar.gz
+      cd /tmp/bison-3.6.4 && ./configure --prefix=/tmp/bison && make all install
+
+      export PATH=/tmp/bison/bin/:$PATH
+      which bison
+      bison --version
+
     configure:
       command:
         - echo ALLTILLA CONFIGURE
